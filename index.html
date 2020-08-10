@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4413e8152d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+    <title>Dashboard Profesional</title>
+</head>
+
+<body>
+    <!--Contenedor de todo nuestro dashboard-->
+    <div class="wrapper">
+        <!--Sidebar-->
+        <div class="sidebar" id="sidebar">
+            <!--Contenedor de nuestro sidebar-->
+            <div class="sidebar-wrapper">
+                <div class="logo-rc">
+                    <img src="images/logo.png" />
+                    <span>rhaegar code</span>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-box"></i>
+                                <span>productos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-cash-register"></i>
+                                <span>ventas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>compras</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-user-tie"></i>
+                                <span>proveedores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-users"></i>
+                                <span>clientes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>ganancias</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Contiene todo el cuerpo de nuestro panel administritivo-->
+        <div class="main-panel">
+            <!--Cabecera o Header de nuestro dashboard -->
+            <nav class="navbar">
+                <!--Botones que animaran nuestro sidebar-->
+                <div class="navbar-bar" id="content-buttons">
+                    <!--El boton por defecto de nuestro header-->
+                    <button id="boton-sidebar"><i class="fas fa-bars"></i></button>
+                    <!--El boton que aparecera desde el modo tablet-->
+                    <button id="boton-sidebar_left"><i class="fas fa-qrcode"></i></button>
+                    <!--El boton que aparecera si es que nuestro dashboard hace scroll-->
+                    <div class="navbar-bar_fixed" id="content-button_fixed">
+                        <button id="boton-sidebar_fixed"><i class="fas fa-chart-bar"></i></button>
+                    </div>
+                    <p>Dashboard</p>
+                </div>
+                
+                <!--Simula opciones sobre botones a la derecha de nuestro header -->
+                <div class="navbar-options">
+                    <i class="fas fa-search"></i>
+                    <i class="far fa-bell"></i>
+                    <div class="photo">
+                        <img src="images/foto.jpeg" />
+                    </div>
+                </div>
+            </nav>
+
+            <!-- El contenedor de graficas de nuestro panel administrativo -->
+            <div class="content" id="main">
+                <!-- Primera fila (Grafica)  -->
+                <div class="grid-row">
+                    <div class="card-chart card">
+                        <div class="header-card_chart">
+                            <span>Total de usuarios</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda fila (4 cards) -->
+                <div class="grid-row_4">
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-comments"></i>
+                            </div>
+                            <div>
+                                <span>Mensajes</span>
+                                <h6>180GB</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualiza</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div>
+                                <span>Seguidores</span>
+                                <h6>5000</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualiza</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-user"></i>
+                            </div>
+                            <div>
+                                <span>Usuarios</span>
+                                <h6>2000</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualiza</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header-card">
+                            <div class="icon">
+                                <i class="far fa-hourglass"></i>
+                            </div>
+                            <div>
+                                <span>Tiempo</span>
+                                <h6>1500</h6>
+                            </div>
+                        </div>
+                        <div class="footer-card">
+                            <i class="far fa-comments"></i>
+                            <span>Actualiza</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tercera fila (3 Graficas) -->
+                <div class="grid-row_charts">
+                    <div class="card-chart card">
+                        <div class="header-card_chart">
+                            <span>Total de videos</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart2" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-chart card">
+                        <div class="header-card_chart">
+                            <span>Total de seguidores</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart3" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-chart card">
+                        <div class="header-card_chart">
+                            <span>Total de donaciones</span>
+                            <h6>Mensualmente</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myChart4" class="chartjs-render-monitor" height="220"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Footer o pies de nuestro dashboard-->
+                <div class="footer-dashboard">
+                    <p>© 2020 hecho con <i class="far fa-heart"></i> de Rhaegar Code para mis suscriptores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+</body>
+
+</html>
+
+<script>
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
+    var ctx4 = document.getElementById('myChart4').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Poppins'
+    Chart.defaults.global.defaultFontSize = 12
+    Chart.defaults.global.defaultFontColor = '#a8a8a8'
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['HTML', 'CSS', 'JS', 'C#', 'PYT', 'PHP', 'GO', 'RJS', 'VJS', 'AJS'],
+            datasets: [{
+                label: '# of Votes',
+                data: [42, 39, 33, 45, 47, 25, 22, 23, 50, 43, 22],
+                backgroundColor: [
+                    'transparent'
+                ],
+                borderColor: [
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F'
+                ],
+                borderWidth: 3,
+
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: { display: false },
+            tooltips: {
+                backgroundColor: "#fff",
+                titleFontColor: "#4c4c4c",
+                bodyFontColor: "#4c4c4c",
+                enabled: true,
+                mode: 'single',
+                multiKeyBackground: "#E1548F"
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(225, 84, 143, 0.1)",
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(225, 84, 143, 0.1)",
+                    }
+                }]
+
+            }
+        }
+    });
+
+    var myChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['JUL', 'AGO', 'OCT', 'NOV', 'DIC', 'ENE'],
+            datasets: [{
+                label: '# of Votes',
+                data: [42, 39, 33, 45, 47, 25, 20],
+                backgroundColor: [
+                    'transparent'
+                ],
+                borderColor: [
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F',
+                    '#E1548F'
+                ],
+                borderWidth: 3,
+
+            }],
+        },
+        options: {
+            responsive: true,
+            legend: { display: false },
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "#fff",
+                titleFontColor: "#4c4c4c",
+                bodyFontColor: "#4c4c4c",
+                enabled: true,
+                mode: 'single'
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(225, 84, 143, 0.1)",
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(225, 84, 143, 0.1)",
+                    }
+                }]
+
+            }
+        }
+    });
+
+    var myChart3 = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['USA', 'BRA', 'PER', 'ARG', 'BOL', 'PAR'],
+            datasets: [{
+                label: '# of Votes',
+                data: [42, 39, 33, 45, 47, 25, 20],
+                backgroundColor: [
+                    'transparent'
+                ],
+                borderColor: [
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0',
+                    '#0098f0'
+                ],
+                borderWidth: 2,
+
+            }],
+        },
+        options: {
+            responsive: true,
+            legend: { display: false },
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "#fff",
+                titleFontColor: "#4c4c4c",
+                bodyFontColor: "#4c4c4c",
+                enabled: true,
+                mode: 'single'
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 152, 240, 0.1)",
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 152, 240, 0.1)",
+                    }
+                }]
+
+            }
+        }
+    });
+
+    var myChart4 = new Chart(ctx4, {
+        type: 'line',
+        data: {
+            labels: ['JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
+            datasets: [{
+                label: '# of Votes',
+                data: [42, 39, 33, 45, 47, 25],
+                backgroundColor: [
+                    'transparent'
+                ],
+                borderColor: [
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3',
+                    '#00f2c3'
+                ],
+                borderWidth: 2,
+
+            }],
+        },
+        options: {
+            responsive: true,
+            legend: { display: false },
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "#fff",
+                titleFontColor: "#4c4c4c",
+                bodyFontColor: "#4c4c4c",
+                enabled: true,
+                mode: 'single'
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 20
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 242,195, 0.1)",
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        color: "rgba(0, 242,195, 0.1)",
+                    }
+                }]
+
+            }
+        }
+    });
+</script>
