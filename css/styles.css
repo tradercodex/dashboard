@@ -345,9 +345,20 @@ nav {
 }
 
 
-.header-card h6, .header-card span{
+.header-card span{
     font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
     color: #a8a8a8;
+    font-size: 10px;
+}
+
+.header-card h6 {
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Poppins';;
+    font-size: 20px;
 }
 
 .footer-card {

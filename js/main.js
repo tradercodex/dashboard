@@ -22,15 +22,6 @@ botonSidebarLeft.addEventListener('click', function() {
     html.classList.toggle('nav-open');
 })
 
-function mostrarSidebarTablet() {
-    let width = document.documentElement.offsetWidth
-    if( width < 1200) {
-        html.classList.add('nav-open');
-    }else {
-        html.classList.remove('nav-open');
-    }
-}
-
 function mostrarBotonFixed() {
     let scroll = document.documentElement.scrollTop
     console.log(scroll)
@@ -45,4 +36,3 @@ function mostrarBotonFixed() {
 
 
 window.addEventListener('scroll', mostrarBotonFixed);
-window.addEventListener('resize', mostrarSidebarTablet);
